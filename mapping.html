@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mapping</title>
+    </head>
+    <body>
+        <p>Width</p>
+        <input type="number" id="width" />
+        <p>Height</p>
+        <input type="number" id="height" />
+        <button type="button" onclick="calculate()">Calculate</button>
+        <script>
+            let getWidth;
+            let getHeight;
+            function calculate() {
+                getWidth = document.getElementById("width").value;
+                getHeight = document.getElementById("height").value;
+                document.write("Width = ");
+                document.writeln((1366 / 1920) * getWidth);
+                document.write("Height = ");
+                document.write((667 / 1080) * getHeight);
+            }
+        </script>
+    </body>
+</html>

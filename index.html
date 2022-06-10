@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dashboard Warga - Profile</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="fontawesome/css/all.css" />
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <div class="navbar-left">
+                    <div class="logo">
+                        <img src="img/logo.png" alt="" />
+                        <div class="tagline">
+                            <p class="title">Pengabdi Desa</p>
+                            <p class="subtitle">
+                                Platform Pengambilan & Informasi Bantuan Sosial
+                                Masyarakat
+                            </p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><a href="#"> Informasi Umum</a></li>
+                        <li><a href="#"> Informasi Bansos</a></li>
+                        <li><a href="#"> Pengambilan Bansos</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-right">
+                    <form action="">
+                        <input type="text" class="form-control" />
+                    </form>
+                    <a href="" class="btn btn-primary btn-sm">Login</a>
+                    <!-- <div class="user">
+                        <i class="fa-solid fa-circle-user fa-2xl"></i>
+                        <i
+                            id="fa-chevron-down"
+                            class="fa-solid fa-chevron-down"
+                        ></i>
+                        <ul class="user-dropdown">
+                            <li><a href="#">Dashboard</a></li>
+                            <li class="divider"></li>
+                            <li>
+                                <a class="logout" href="#"
+                                    ><i
+                                        class="fa-solid fa-right-from-bracket fa-xl"
+                                    ></i
+                                    >Log out</a
+                                >
+                            </li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+        </header>
+        <main>
+            <aside>
+                <i class="sidebar-collapse fa-solid fa-angles-left fa-lg"></i>
+                <div class="sidebar-header"></div>
+                <ul class="sidebar-body">
+                    <a href="#"
+                        ><li class="active">
+                            <i class="fa-solid fa-address-card fa-xl"></i>
+                            <span class="sidebar-link"> Profile </span>
+                        </li></a
+                    >
+                    <a href="#"
+                        ><li>
+                            <i class="fa-solid fa-clipboard-list fa-xl"></i>
+                            <span class="sidebar-link"> Informasi Bansos </span>
+                        </li></a
+                    >
+                    <a href="#"
+                        ><li>
+                            <i class="fa-solid fa-newspaper fa-xl"></i>
+                            <span class="sidebar-link"> Informasi Umum </span>
+                        </li></a
+                    >
+                </ul>
+            </aside>
+            <div id="content">
+                <div class="row">
+                    <div class="page-title">
+                        <div class="page-title-icon">
+                            <i class="fa-solid fa-address-card fa-2xl"></i>
+                        </div>
+                        <div class="page-title-breadcrumb">
+                            <p>Profile</p>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="#">Home</a>
+                                </li>
+                                <li
+                                    class="breadcrumb-item active"
+                                    aria-current="page"
+                                >
+                                    Library
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h5 class="card-header">Featured</h5>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">
+                            With supporting text below as a natural lead-in to
+                            additional content.
+                        </p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+        <script src="jquery-3.6.0.min.js"></script>
+        <script src="bootstrap/js/bootstrap.bundle.js"></script>
+        <script>
+            $(document).ready(function () {
+                $(".user").click(function () {
+                    if (
+                        $(".fa-chevron-down").css("transform") ==
+                        "matrix(1, 0, 0, -1, 0, 0)"
+                    ) {
+                        $(".fa-chevron-down").css("transform", "scaleY(1)");
+                    } else {
+                        $(".fa-chevron-down").css("transform", "scaleY(-1)");
+                    }
+                    if ($(".user-dropdown").css("display") == "none") {
+                        $(".user-dropdown").css("display", "flex");
+                    } else {
+                        $(".user-dropdown").css("display", "none");
+                    }
+                });
+                $(".sidebar-collapse").click(function () {
+                    if (
+                        $(".sidebar-collapse").css("transform") ==
+                        "matrix(-1, 0, 0, 1, 0, 0)"
+                    ) {
+                        $("aside").css("width", "230px");
+                        $(".sidebar-collapse").css("transform", "scaleX(1)");
+                        $("#content").css("padding", "100px 50px 0px 280px");
+                        setTimeout(function () {
+                            $(".sidebar-link").css("display", "inline");
+                        }, 300);
+                    } else {
+                        $("aside").css("width", "65px");
+                        $(".sidebar-collapse").css("transform", "scaleX(-1)");
+                        $(".sidebar-link").css("display", "none");
+                        setTimeout(function () {
+                            $("#content").css(
+                                "padding",
+                                "100px 50px 0px 115px"
+                            );
+                        }, 300);
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

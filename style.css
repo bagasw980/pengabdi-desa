@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+* {
+  font-family: "Raleway", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+header .navbar {
+  z-index: 100;
+  width: 100%;
+  height: 60px;
+  padding: 0px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+header .navbar .navbar-left {
+  position: relative;
+  width: 70%;
+  display: flex;
+  justify-content: flex-start;
+}
+header .navbar .navbar-left .logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+header .navbar .navbar-left .logo img {
+  width: 36px;
+  height: 36px;
+}
+header .navbar .navbar-left .logo .tagline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #0f75bd;
+  margin-left: 10px;
+}
+header .navbar .navbar-left .logo .tagline .title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: unset;
+}
+header .navbar .navbar-left .logo .tagline .subtitle {
+  font-size: 10px;
+  margin: unset;
+}
+header .navbar .navbar-left ul {
+  display: flex;
+  align-items: center;
+  padding: unset;
+  margin: unset;
+}
+header .navbar .navbar-left ul li {
+  height: fit-content;
+  margin: 0px 10px;
+}
+header .navbar .navbar-left ul li a {
+  color: #00458b;
+  text-decoration: none;
+  font-weight: bold;
+}
+header .navbar .navbar-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header .navbar .navbar-right form {
+  display: inline;
+}
+header .navbar .navbar-right .btn-primary {
+  background-color: #26a6ff;
+  border-color: #26a6ff;
+  font-weight: 500;
+}
+header .navbar .navbar-right .btn-primary:hover {
+  background-color: #0f75bd;
+  border-color: #0f75bd;
+}
+header .navbar .navbar-right .user {
+  position: relative;
+  cursor: pointer;
+}
+header .navbar .navbar-right .user i {
+  transition: all 0.3s ease-in;
+  color: #666;
+}
+header .navbar .navbar-right .user .user-dropdown {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  display: none;
+  flex-direction: column;
+  padding: 20px 15px;
+  background-color: white;
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25) px;
+  height: fit-content;
+  width: fit-content;
+  transition: all 0.5s ease-in;
+}
+header .navbar .navbar-right .user .user-dropdown li {
+  margin: 5px 10px;
+  width: max-content;
+}
+header .navbar .navbar-right .user .user-dropdown li a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+header .navbar .navbar-right .user .user-dropdown li a i {
+  color: #333;
+  margin-right: 5px;
+}
+header .navbar .navbar-right .user .user-dropdown li a:hover {
+  color: #111;
+  font-weight: 900;
+}
+header .navbar .navbar-right .user .user-dropdown li .logout {
+  color: #dc3545;
+}
+header .navbar .navbar-right .user .user-dropdown li .logout i {
+  color: #dc3545;
+}
+header .navbar .navbar-right .user .user-dropdown li .logout:hover {
+  color: #dc3545;
+}
+header .navbar .navbar-right .user .user-dropdown .divider {
+  margin: 5px 0px;
+  padding: unset;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+}
+
+main {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #f0f0f0;
+}
+main aside {
+  z-index: 2;
+  width: 230px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.15);
+  padding: 100px 0px 0px 0px;
+  transition: width 0.3s ease-in;
+  overflow: hidden;
+}
+main aside .sidebar-collapse {
+  position: absolute;
+  right: 5px;
+  top: 80px;
+  transition: all 0.3s ease-in;
+}
+main aside .sidebar-body {
+  padding: unset;
+  margin: unset;
+}
+main aside .sidebar-body a {
+  text-decoration: none;
+  color: #333;
+}
+main aside .sidebar-body a li {
+  border: 1px solid #f0f0f0;
+  padding: 15px 15px;
+}
+main aside .sidebar-body a li i {
+  color: #555;
+  margin-right: 5px;
+  width: 24px;
+  text-align: right;
+}
+main aside .sidebar-body a li .sidebar-link {
+  display: inline;
+}
+main aside .sidebar-body a .active {
+  background-color: #f0f0f0;
+}
+main aside .sidebar-body a:hover li {
+  background-color: #f0f0f0;
+}
+main #content {
+  z-index: 0;
+  background-color: #f0f0f0;
+  padding: 100px 50px 0px 280px;
+  min-height: 100vh;
+  transition: width 0.3 ease-in;
+}
+main #content .page-title {
+  display: flex;
+  align-items: center;
+}
+main #content .page-title .page-title-breadcrumb {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+main #content .page-title .page-title-breadcrumb p {
+  font-size: 20px;
+  font-weight: bold;
+  margin: unset;
+}
+main #content .page-title .page-title-breadcrumb .breadcrumb {
+  margin: unset;
+}
+main #content .page-title .page-title-breadcrumb .breadcrumb .breadcrumb-item {
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=style.css.map */
